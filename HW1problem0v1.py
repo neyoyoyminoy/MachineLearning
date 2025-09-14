@@ -7,10 +7,11 @@
 #mnist is the handwritten dataset
 from tensorflow.keras.datasets import mnist #given from Dr. Markopoulos
 
-(train_X, train_y), (test_X, test_y) = mnist.load_data() #this will load data into the variables
+(trainX, trainY), (testX, testY) = mnist.load_data() #this will load data into the variables
 
-print("X_train: " + str(train_X.shape)) #prints the trained vector
-print("Y_train: " + str(train_y.shape))
+print("Xtrain: " + str(trainX.shape)) #prints the trained vector
+print("Ytrain: " + str(trainY.shape))
 
-print("X_test: " + str(test_X.shape)) #prints the tested vector
-print("Y_test: " + str(test_y.shape))
+print("Xtest: " + str(testX.shape)) #prints the tested vector
+print("Ytest: " + str(testY.shape))
+
