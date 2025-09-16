@@ -7,12 +7,17 @@
 
 import numpy as np
 
-Xn = np.random.binomial(n = 1, p = 0.05, size = 748) #starting at 1, probability of 5%, and the max vector size of the MNIST is 748 (28*28)
+noisyXn = np.random.binomial(n = 1, p = 0.05, size = 748) #starting at 1, probability of 5%, and the max vector size of the MNIST is 748 (28*28)
 
-n = 0
+#x[x == 1] = 250
+
+print(noisyXn)
+
+'''n = 0
 
 while n <= 784:
   n += 1
   print(n)
 else:
   print('loop stopped')
+ '''
