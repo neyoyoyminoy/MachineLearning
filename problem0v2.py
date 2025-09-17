@@ -16,10 +16,10 @@ trainingImages = trainX[mask] #grabbing the masked images for vectorization
 
 vTrainingImages = trainingImages.reshape(trainingImages.shape[0], -1) #vectorized images of 0, 1, and 9
 
-matrixX = vTrainingImages.astype('float32') #sets matrix X to float32
+matrixX = vTrainingImages.T.astype('float32') #fixed it to columns with transpose 'T', sets matrix X to float32
 
 
-print("Matrix X:", X.shape) #the final values of matrix X
+print("Matrix X:", matrixX.shape) #the final values of matrix X
 
 '''
 print("Xtrain: " + str(trainX.shape)) #prints the trained vector
@@ -27,3 +27,4 @@ print("Ytrain: " + str(trainY.shape))
 
 print("trainYmask: " + str(trainYmask.shape)) #prints the shape of the mask, this should be the same as the og array
 '''
+
