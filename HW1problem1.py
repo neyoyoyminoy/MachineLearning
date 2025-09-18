@@ -18,9 +18,9 @@ digit0 = vTrainingImages[trainY[mask] == 0] #seperated each training digit
 digit1 = vTrainingImages[trainY[mask] == 1]
 digit9 = vTrainingImages[trainY[mask] == 9]
 
-centroid0 = np.mean(digit0, axis=0) #the 'mean' should find the centroid of the matrix
-centroid1 = np.mean(digit1, axis=0)
-centroid9 = np.mean(digit9, axis=0)
+centroid0 = np.mean(digit0, axis = 0) #the 'mean' should find the centroid of the matrix
+centroid1 = np.mean(digit1, axis = 0)
+centroid9 = np.mean(digit9, axis = 0)
 
 '''
 print("centroid 0: ", centroid0.shape)
@@ -28,17 +28,17 @@ print("centroid 1: ", centroid1.shape)
 print("centroid 9: ", centroid9.shape)
 '''
 
-manNorm0 = np.linalg.norm(centroid0, ord=1) #1-norm aka manhattan norm versions of each digit
-manNorm1 = np.linalg.norm(centroid1, ord=1)
-manNorm9 = np.linalg.norm(centroid9, ord=1)
+manNorm0 = np.linalg.norm(centroid0, ord = 1) #1-norm aka manhattan norm versions of each digit
+manNorm1 = np.linalg.norm(centroid1, ord = 1)
+manNorm9 = np.linalg.norm(centroid9, ord = 1)
 
-euNorm0 = np.linalg.norm(centroid0, ord=2) #2-norms aka euclidean norm versions of each digit
-euNorm1 = np.linalg.norm(centroid1, ord=2)
-euNorm9 = np.linalg.norm(centroid9, ord=2)
+euNorm0 = np.linalg.norm(centroid0, ord = 2) #2-norms aka euclidean norm versions of each digit
+euNorm1 = np.linalg.norm(centroid1, ord = 2)
+euNorm9 = np.linalg.norm(centroid9, ord = 2)
 
-cubeNorm0 = np.linalg.norm(centroid0, ord=3) #3-norm aka cubed norm versions of each digit
-cubeNorm1 = np.linalg.norm(centroid1, ord=3)
-cubeNorm9 = np.linalg.norm(centroid9, ord=3)
+cubeNorm0 = np.linalg.norm(centroid0, ord = 3) #3-norm aka cubed norm versions of each digit
+cubeNorm1 = np.linalg.norm(centroid1, ord = 3)
+cubeNorm9 = np.linalg.norm(centroid9, ord = 3)
 
 
 print("manhattan norms")
