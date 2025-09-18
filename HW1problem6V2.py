@@ -45,6 +45,9 @@ print("Vh:", Vh.shape) #right
 
 kSet = [1, 51, 101, 784] #from problem 3
 
+error1 = [] #both error values had to be outside the loop to be lists
+error2 = []
+
 for k in kSet:
   Qk = U[:, :k] #using first 'k' columns of 'U'
   projection = np.dot(Qk.T, Xn) #this was hard but used the dot product and transpose to get the projection
@@ -55,13 +58,13 @@ for k in kSet:
   print("Yk: ", Yk)
   '''
 
-error1 = np.linalg.norm(X - Yk, 'fro') #this is basically the clean error; Frobenius norm for both errors aka 'fro'
-error2 = np.linalg.norm(Xn - Yk, 'fro') #so this is the noisy error
+  error1.append(np.linalg.norm(X - Yk, 'fro')) #this is basically the clean error; Frobenius norm for both errors aka 'fro'
+  error1.append(np.linalg.norm(Xn - Yk, 'fro')) #so this is the noisy error
 
-'''
-print("error1: ", error1)
-print("error2: ", error2)
-'''
+  '''
+  print("error1: ", error1)
+  print("error2: ", error2)
+  '''
 
 import matplotlib.pyplot as plt
 
