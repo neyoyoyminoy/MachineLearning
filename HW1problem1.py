@@ -26,6 +26,7 @@ centroid9 = np.mean(digit9, axis=0)
 print("centroid 0: ", centroid0.shape)
 print("centroid 1: ", centroid1.shape)
 print("centroid 9: ", centroid9.shape)
+'''
 
 manNorm0 = np.linalg.norm(centroid0, ord=1) #1-norm aka manhattan norm versions of each digit
 manNorm1 = np.linalg.norm(centroid1, ord=1)
