@@ -59,7 +59,7 @@ for k in kSet:
   '''
 
   error1.append(np.linalg.norm(X - Yk, 'fro')) #this is basically the clean error; Frobenius norm for both errors aka 'fro'
-  error1.append(np.linalg.norm(Xn - Yk, 'fro')) #so this is the noisy error
+  error2.append(np.linalg.norm(Xn - Yk, 'fro')) #so this is the noisy error
 
   '''
   print("error1: ", error1)
