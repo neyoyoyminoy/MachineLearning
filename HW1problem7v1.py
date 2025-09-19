@@ -80,4 +80,4 @@ else:
     print("f is not in the span of G")
 
 w = np.linalg.lstsq(G, f, rcond = None)[0] #least squares used to find the solution if one exists
-print("Least squares solution for w: ", w)
+print("the solution to f = Gw is... ", w)
