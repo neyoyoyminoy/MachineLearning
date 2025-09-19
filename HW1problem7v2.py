@@ -78,7 +78,7 @@ for caseName, G, f in case:
   if np.allclose(projectionGf, f): #allclose is a comparison tool with a tolarance aka the absolute difference
     print("f is in the span of G")
   else:
-    print("f is not in the span of G")\
+    print("f is not in the span of G")
   
   w = np.linalg.lstsq(G, f, rcond=None)[0] #least squares used to find the solution if one exists
   print("the solution to f = Gw is... ", w)
