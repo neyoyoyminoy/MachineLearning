@@ -71,12 +71,13 @@ rankG = np.linalg.matrix_rank(G)
 print("rank of G: ", rankG)
 
 projectionG = np.dot(G, np.linalg.inv(G.T @ G) @ G.T) #full column rank projection
-
 projectionGf = np.dot(projectionG, f) #projection of vector f onto matrix G
-
 print(projectionGf)
 
 if np.allclose(projectionGf, f): #allclose is a comparison tool with a tolarance aka the absolute difference
     print("f is in the span of G")
 else:
     print("f is not in the span of G")
+
+w = np.linalg.lstsq(G, f, rcond = None)[0] #least squares used to find the solution if one exists
+print("Least squares solution for w: ", w)
