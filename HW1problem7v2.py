@@ -71,7 +71,7 @@ for caseName, G, f in case:
   rankG = np.linalg.matrix_rank(G)
   print("rank of G: ", rankG)
 
-  projectionG = np.dot(G, np.linalg.inv(G.T @ G) @ G.T) #full column rank projection
+  projectionG = G @ np.linalg.pinv(G) #had to use psudoinverse since the first couple of tests would have an error on case 4
   projectionGf = np.dot(projectionG, f) #projection of vector f onto matrix G
   print(projectionGf)
 
